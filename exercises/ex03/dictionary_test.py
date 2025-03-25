@@ -71,3 +71,8 @@ def test_bin_len_use1() -> None:
 def test_bin_len_use2() -> None:
     """Tests that inputs of 1 length are listed in the same set in the dictionary"""
     assert bin_len(["red", "fox", "spy", "die"]) == {3: {"red", "fox", "spy", "die"}}
+
+
+def test_bin_len_edge1() -> None:
+    """Tests that input of empty list returns set literal"""
+    assert bin_len([]) == {}
