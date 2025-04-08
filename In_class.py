@@ -51,7 +51,8 @@ ice_cream["mint"]
 
 if "mint" in ice_cream:
     print(ice_cream["mint"])
-else: print("No orders of mint")
+else:
+    print("No orders of mint")
 
 """Removing elements in dictionary"""
 ice_cream.pop("vanilla")
@@ -59,3 +60,25 @@ ice_cream.pop("vanilla")
 """for , in loop"""
 for key in ice_cream:
     print(key)
+
+
+class Line:
+    x: float
+    y: float
+
+    def __init__(self, x: float, y: float) -> None:
+        self.x = x
+        self.y = y
+
+    def dist_from_origin(self) -> float:
+        return (self.x**2 + self.y**2) ** 0.5
+
+    def translate_x(self, dx: float) -> None:
+        self.x += dx
+
+    def translation(self, dy: float) -> None:
+        self.y += dy
+
+    def __str__(self) -> str:
+        """Magic method that prints string representation of Point obj"""
+        return f"({self.x}, {self.y})"
