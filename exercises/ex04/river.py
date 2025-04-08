@@ -1,7 +1,9 @@
 """File to define River class."""
 
-from exercises.ex04.fish import Fish
-from exercises.ex04.bear import Bear
+__author__: str = "730564797"
+
+from exercises.EX04.fish import Fish
+from exercises.EX04.bear import Bear
 
 
 class River:
@@ -36,6 +38,7 @@ class River:
         return None
 
     def bears_eating(self):
+        """Hungry Bear"""
         for Bear in self.bears:
             if len(self.fish) >= 5:
                 self.remove_fish(3)
@@ -100,6 +103,7 @@ class River:
         self.view_river()
 
     def one_river_week(self):
+        """One week = 7 days"""
         count: int = 0
         while count < 7:
             self.one_river_day()
