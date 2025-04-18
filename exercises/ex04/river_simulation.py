@@ -1,3 +1,5 @@
+"""River Simulation for Style."""
+
 from exercises.EX04.river import River
 
 """Simulate the river."""
